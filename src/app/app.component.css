@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    padding: 0 20px;
+}
+
+:host-context {
+    background-color: whitesmoke;
+}
+
+:host h1 {
+    color: red;
+}
+
+:host ::ng-deep h2 {
+    color: blue;
+}
