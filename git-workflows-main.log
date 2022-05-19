@@ -1,0 +1,329 @@
+Build and Test
+succeeded now in 2m 30s
+Search logs
+Set up job
+  Current runner version: '2.291.1'
+  Operating System
+  Virtual Environment
+  Virtual Environment Provisioner
+  GITHUB_TOKEN Permissions
+  Secret source: Actions
+  Prepare workflow directory
+  Prepare all required actions
+  Getting action download info
+  Download action repository 'actions/checkout@v2' (SHA:7884fcad6b5d53d10323aee724dc68d8b9096a2e)
+  Download action repository 'actions/setup-node@v2' (SHA:1f8c6b94b26d0feae1e387ca63ccbdc44d27b561)
+  Download action repository 'cypress-io/github-action@v2' (SHA:f5bea478b80a774068179089247f13d60abc5010)
+(2s)
+Checkout
+  Run actions/checkout@v2
+    with:
+    repository: bbanda/ng-demo
+    token: ***
+    ssh-strict: true
+    persist-credentials: true
+    clean: true
+    fetch-depth: 1
+    lfs: false
+    submodules: false
+    set-safe-directory: true
+  Syncing repository: bbanda/ng-demo
+  Getting Git version info
+    Working directory is '/home/runner/work/ng-demo/ng-demo'
+    /usr/bin/git version
+    git version 2.36.1
+  Temporarily overriding HOME='/home/runner/work/_temp/8ce71c02-fb72-4fa5-99a5-ae368c0c510a' before making global git config changes
+  Adding repository directory to the temporary git global config as a safe directory
+  /usr/bin/git config --global --add safe.directory /home/runner/work/ng-demo/ng-demo
+  Deleting the contents of '/home/runner/work/ng-demo/ng-demo'
+  Initializing the repository
+  Disabling automatic garbage collection
+  Setting up auth
+  Fetching the repository
+  Determining the checkout info
+  Checking out the ref
+  /usr/bin/git log -1 --format='%H'
+  'bf3c9a756114e5e1bb1df116e48654010c73f476'
+(1s)
+Use Node 14.x
+  Run actions/setup-node@v2
+    with:
+      node-version: 14.x
+      always-auth: false
+      check-latest: false
+      token: ***
+  Found in cache @ /opt/hostedtoolcache/node/14.19.2/x64
+(0s)
+Install latest Chrome
+  Run sudo apt update
+
+  WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+  Hit:1 http://azure.archive.ubuntu.com/ubuntu focal InRelease
+  Get:2 http://azure.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+  Get:3 http://azure.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+  Get:4 http://azure.archive.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+  Get:5 https://packages.microsoft.com/ubuntu/20.04/prod focal InRelease [10.5 kB]
+  Get:6 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1793 kB]
+  Get:7 http://azure.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [330 kB]
+  Get:8 http://azure.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15.2 kB]
+  Get:9 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [976 kB]
+  Get:10 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [139 kB]
+  Get:11 http://azure.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [520 B]
+  Get:12 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [924 kB]
+  Get:13 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [207 kB]
+  Get:14 http://azure.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.7 kB]
+  Get:15 http://azure.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.4 kB]
+  Get:16 http://azure.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [596 B]
+  Get:17 http://azure.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [68.1 kB]
+  Get:18 http://azure.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.9 kB]
+  Get:19 http://azure.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [980 B]
+  Get:20 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [26.8 kB]
+  Get:21 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [15.9 kB]
+  Get:22 http://azure.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+  Hit:23 http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu focal InRelease
+  Get:24 http://azure.archive.ubuntu.com/ubuntu focal-security/main amd64 Packages [1453 kB]
+  Get:25 http://azure.archive.ubuntu.com/ubuntu focal-security/main Translation-en [250 kB]
+  Get:26 http://azure.archive.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10.2 kB]
+  Get:27 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [914 kB]
+  Get:28 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted Translation-en [130 kB]
+  Get:29 http://azure.archive.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [520 B]
+  Get:30 http://azure.archive.ubuntu.com/ubuntu focal-security/universe amd64 Packages [703 kB]
+  Get:31 http://azure.archive.ubuntu.com/ubuntu focal-security/universe Translation-en [125 kB]
+  Get:32 http://azure.archive.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14.4 kB]
+  Get:33 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [22.2 kB]
+  Get:34 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5376 B]
+  Get:35 http://azure.archive.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [512 B]
+  Get:36 https://packages.microsoft.com/ubuntu/20.04/prod focal/main armhf Packages [21.7 kB]
+  Get:37 https://packages.microsoft.com/ubuntu/20.04/prod focal/main arm64 Packages [26.8 kB]
+  Get:38 https://packages.microsoft.com/ubuntu/20.04/prod focal/main amd64 Packages [160 kB]
+  Fetched 8739 kB in 2s (4860 kB/s)
+  Reading package lists...
+  Building dependency tree...
+  Reading state information...
+  39 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+  WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+  Reading package lists...
+  Building dependency tree...
+  Reading state information...
+  google-chrome-stable is already the newest version (101.0.4951.64-1).
+  0 upgraded, 0 newly installed, 0 to remove and 39 not upgraded.
+  Google Chrome 101.0.4951.64 
+(9s)
+Install dependencies
+  Run npm ci
+
+  > fsevents@1.2.13 install /home/runner/work/ng-demo/ng-demo/node_modules/webpack-dev-server/node_modules/fsevents
+  > node install.js
+
+
+  Skipping 'fsevents' build as platform linux is not supported
+
+  > nice-napi@1.0.2 install /home/runner/work/ng-demo/ng-demo/node_modules/nice-napi
+  > node-gyp-build
+
+
+  > esbuild@0.13.8 postinstall /home/runner/work/ng-demo/ng-demo/node_modules/esbuild
+  > node install.js
+
+
+  > core-js@3.16.0 postinstall /home/runner/work/ng-demo/ng-demo/node_modules/core-js
+  > node -e "try{require('./postinstall')}catch(e){}"
+
+
+  > cypress@9.6.1 postinstall /home/runner/work/ng-demo/ng-demo/node_modules/cypress
+  > node index.js --exec install
+
+  Installing Cypress (version: 9.6.1)
+
+  [STARTED] Task without title.
+  [SUCCESS] Task without title.
+  [STARTED] Task without title.
+  [SUCCESS] Task without title.
+  [STARTED] Task without title.
+  [SUCCESS] Task without title.
+
+  You can now open Cypress by running: node_modules/.bin/cypress open
+
+  https://on.cypress.io/installing-cypress
+
+
+  > @angular/cli@12.2.17 postinstall /home/runner/work/ng-demo/ng-demo/node_modules/@angular/cli
+  > node ./bin/postinstall/script.js
+
+  added 1426 packages in 25.622s
+(26s)
+Run unit Tests
+  Run xvfb-run npm test -- --watch=false
+
+  > ng-demo@0.0.0 test /home/runner/work/ng-demo/ng-demo
+  > ng test "--watch=false"
+
+  - Generating browser application bundles (phase: setup)...
+  Compiling @angular/core : es2015 as esm2015
+  Compiling @angular/core/testing : es2015 as esm2015
+  Compiling @angular/common : es2015 as esm2015
+  Compiling @angular/platform-browser : es2015 as esm2015
+  Compiling @angular/platform-browser-dynamic : es2015 as esm2015
+  Compiling @angular/platform-browser/testing : es2015 as esm2015
+  Compiling @angular/compiler/testing : es2015 as esm2015
+  Compiling @angular/platform-browser-dynamic/testing : es2015 as esm2015
+  Compiling @angular/common/testing : es2015 as esm2015
+  Compiling @angular/router : es2015 as esm2015
+  Compiling @angular/router/testing : es2015 as esm2015
+  Compiling @angular/forms : es2015 as esm2015
+  Compiling @angular/common/http : es2015 as esm2015
+  Compiling @angular/common/http/testing : es2015 as esm2015
+  19 05 2022 22:30:47.438:INFO [karma-server]: Karma v6.3.20 server started at http://localhost:9876/
+  19 05 2022 22:30:47.440:INFO [launcher]: Launching browsers Chrome with concurrency unlimited
+  19 05 2022 22:30:47.443:INFO [launcher]: Starting browser Chrome
+  ✔ Browser application bundle generation complete.
+  19 05 2022 22:30:51.582:INFO [Chrome 101.0.4951.64 (Linux x86_64)]: Connected on socket QtqfCEWtzl4Nn4v9AAAB with id 42794525
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 0 of 11 SUCCESS (0 secs / 0 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 1 of 11 SUCCESS (0 secs / 0.038 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 2 of 11 SUCCESS (0 secs / 0.043 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 3 of 11 SUCCESS (0 secs / 0.047 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 4 of 11 SUCCESS (0 secs / 0.052 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 5 of 11 SUCCESS (0 secs / 0.054 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 6 of 11 SUCCESS (0 secs / 0.056 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 7 of 11 SUCCESS (0 secs / 0.058 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 8 of 11 SUCCESS (0 secs / 0.086 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 9 of 11 SUCCESS (0 secs / 0.092 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 10 of 11 SUCCESS (0 secs / 0.098 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 11 of 11 SUCCESS (0 secs / 0.123 secs)
+  Chrome 101.0.4951.64 (Linux x86_64): Executed 11 of 11 SUCCESS (0.156 secs / 0.123 secs)
+  TOTAL: 11 SUCCESS
+  ✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+(21s)
+Run integration Tests
+(1m 28s)
+
+✔ Browser application bundle generation complete.
+Initial Chunk Files | Names         |      Size
+vendor.js           | vendor        |   2.76 MB
+polyfills.js        | polyfills     | 123.38 kB
+main.js             | main          |  39.17 kB
+runtime.js          | runtime       |   6.61 kB
+styles.css          | styles        | 736 bytes
+| Initial Total |   2.93 MB
+Build at: 2022-05-19T22:32:01.164Z - Hash: 115c8d32cfebe0f7d00c - Time: 7981ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+✔ Compiled successfully.
+[3357:0519/223203.294086:ERROR:gpu_init.cc(453)] Passthrough is not supported, GL is swiftshader, ANGLE is 
+====================================================================================================
+  (Run Starting)
+  ┌────────────────────────────────────────────────────────────────────────────────────────────..
+  │ Cypress:        9.6.1                                                                          │
+  │ Browser:        Electron 94 (headless)                                                         │
+  │ Node Version:   v12.22.7 (/home/runner/runners/2.291.1/externals/node12/bin/node)              │
+  │ Specs:          3 found (edit.spec.ts, home.spec.ts, search.spec.ts)                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────..
+─────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  edit.spec.ts                                                                    (1 of 3)
+
+  Edit
+    ✓ should allow viewing a person (1567ms)
+    ✓ should allow updating a name (1053ms)
+  2 passing (3s)
+  (Results)
+  ┌────────────────────────────────────────────────────────────────────────────────────────────..
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     edit.spec.ts                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────..
+  (Video)
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/runner/work/ng-demo/ng-demo/cypress/videos/edit.spec.    (0 seconds)
+                          ts.mp4                                                                    
+─────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  home.spec.ts                                                                    (2 of 3)
+
+  Home
+    ✓ Visits the initial project page (1291ms)
+  1 passing (1s)
+  (Results)
+  ┌────────────────────────────────────────────────────────────────────────────────────────────..
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     home.spec.ts                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────..
+  (Video)
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/runner/work/ng-demo/ng-demo/cypress/videos/home.spec.    (0 seconds)
+                          ts.mp4                                                                    
+─────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  search.spec.ts                                                                  (3 of 3)
+
+  Search
+    ✓ should have an input and search button (1076ms)
+    ✓ should allow searching (945ms)
+  2 passing (2s)
+  (Results)
+  ┌────────────────────────────────────────────────────────────────────────────────────────────..
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     search.spec.ts                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────..
+  (Video)
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/runner/work/ng-demo/ng-demo/cypress/videos/search.spe    (0 seconds)
+                          c.ts.mp4                                                                  
+====================================================================================================
+  (Run Finished)
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────..
+  │ ✔  edit.spec.ts                             00:02        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────..
+  │ ✔  home.spec.ts                             00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────..
+  │ ✔  search.spec.ts                           00:02        2        2        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────..
+    ✔  All specs passed!                        00:06        5        5        -        -        -  
+
+Post use Node 14.X
+  Post job cleanup.
+(0s)
+Post checkout
+  Post job cleanup.
+  /usr/bin/git version
+  git version 2.36.1
+  Temporarily overriding HOME='/home/runner/work/_temp/702f2606-f60a-42f4-ace7-b41af0b61c2d' before making global git config changes
+  Adding repository directory to the temporary git global config as a safe directory
+  /usr/bin/git config --global --add safe.directory /home/runner/work/ng-demo/ng-demo
+  /usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+  /usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+  /usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+  http.https://github.com/.extraheader
+  /usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+  /usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+(0s)
+Complete job
+  Cleaning up orphan processes
+  Terminate orphan process: pid (3176) (npm)
+  Terminate orphan process: pid (3187) (sh)
+  Terminate orphan process: pid (3188) (ng serve)
+(0s)
